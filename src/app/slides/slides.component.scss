@@ -1,0 +1,21 @@
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+.my-swiper {
+    height: calc(100% - 30px);
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.swiper-slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  height: 100%;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 20px;
+}
