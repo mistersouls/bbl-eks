@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SlidesComponent } from './slides/slides.component';
 import { SwiperModule } from 'swiper/angular';
+import { CoverComponent } from './cover/cover.component';
+import { ContentsComponent } from './contents/contents.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SlidesComponent
+    SlidesComponent,
+    CoverComponent,
+    ContentsComponent
   ],
   imports: [
     BrowserModule,
