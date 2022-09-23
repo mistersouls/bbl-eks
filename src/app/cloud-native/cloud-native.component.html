@@ -1,0 +1,60 @@
+
+<!-- <div class="container" style="height: 100%; ">
+    <h1 class="p-5 text-center">Cloud native, c'est quoi?</h1>
+    <div class="d-flex justify-content-center m-auto" style="height: 100%">
+        <div class="m-auto"><img src="assets/cloud-native-1.gif"></div>
+    </div>
+</div> -->
+
+<div *ngIf="!disMoi">
+  <div class="p-5 text-center bg-image" style="
+  background-image: url('assets/cloud-native-1.gif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  ">
+  <div class="mask p-2" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Cloud native</h1>
+        <h4 class="mb-3">C'est quoi?</h4>
+        <a class="btn btn-outline-light btn-lg" (click)="clickDisMoi()" role="button">Dis moi</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container p-5">
+    <div class="row py-5">
+        <div class="col-sm">
+            <div><img src="assets/etonne.png"></div>
+        </div>
+        <div class="col-sm my-auto">
+            <h2>Ce n'est pas seulement déployer une application dans le cloud</h2>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div style="height: 80%;" *ngIf="disMoi">
+  <div class="d-flex justify-content-end">
+      <button style="height: 50px; width: 50px" (click)="clickDisMoi()"
+          type="button" class="btn btn-dark m-2 btn-circle">X</button>
+  </div>
+  <div class="d-flex justify-content-between">
+    <div class="m-auto" type="button" placement="bottom"
+      ngbPopover="Une réactivité rapide, des fonctionnalités innovantes et un temps d’arrêt nul"><img src="assets/devops.png"></div>
+    <div class="m-auto" type="button" placement="bottom"
+      ngbPopover="Le cloud natif est à propos de la vitesse et de l’agilité"><img src="assets/cd.png"></div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="m-auto" type="button" placement="bottom"
+    ngbPopover="une approche de conception, de construction et d'exploitation des charges de travail"><img src="assets/cloud-native.png"></div>
+  </div>
+  <div class="d-flex justify-content-between">
+    <div class="m-auto" type="button" placement="bottom"
+    ngbPopover="Systèmes faiblement couplés qui sont résilients, gérables et observables"><img src="assets/microservice.png"></div>
+    <div class="m-auto" type="button" placement="bottom"
+      ngbPopover="Environnements modernes et dynamiques"><img src="assets/containers.png"></div>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+  <div class="header">
+    <h1 class="title">
+      Réseau virtuel en tant que solution
+    </h1>
+    <div class="toggle" (click)="tabChange('home')">
+      <span class="chevron"></span>
+    </div>
+  </div>
+  <div class="content">
+    <div class="link" (click)="tabChange('vpc')">
+      <div class="content">
+        <div class="title">AWS VPC</div>
+      </div>
+    </div>
+    <div class="link" (click)="tabChange('design')">
+      <div class="content">
+        <div class="title">Design</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+</div>
+
+<div class="d-flex justify-content-center" style="height: 100vh;" *ngIf="tab === 'home'">
+    <div class="list-group my-group">
+        <a class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex justify-content-between py-4" style="width: 500px;">
+            <h5 class="mb-1">Plus besoin de câbles et de commutateurs</h5>
+            <small>extensible</small>
+          </div>
+          <p class="mb-1">Un réseau virtuel facilite les modifs de conf réseau.</p>
+          <small>Un réseau physique relie des ordinateurs par des câbles</small>
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex justify-content-between py-4">
+            <h5 class="mb-1">Couches 2 et 3 du modèle OSI</h5>
+            <small class="text-muted">réseau plus vaste</small>
+          </div>
+          <p class="mb-1">Un réseau virtuel permet une administration simplifiée.</p>
+          <small class="text-muted">Un réseau physique dépend généralement du matériel</small>
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-150 justify-content-between py-4">
+            <h5 class="mb-1">Exemple de réseau virtuel</h5>
+            <small class="text-muted">VPN</small>
+          </div>
+          <p class="mb-1">VPN, VLAN, VXLAN</p>
+          <small class="text-muted">Scalabilité, failover, superposition et une capacité importante.</small>
+        </a>
+      </div>
+</div>
+
+<div *ngIf="tab == 'vpc'" style="
+width: 600px;
+margin-left: 330px;
+margin-top: 80px;
+">
+    <h1>VPC: Virtual Private Cloud</h1>
+    <h5 style="margin-bottom: 18px;">Un réseau virtuel dédié à votre compte AWS</h5>
+    <div class="d-flex justify-content-center" *ngIf="tab == 'vpc'" >
+        <table class="table">
+            <tbody>
+              <tr>
+                <td>Sous-réseaux</td>
+                <td>Route</td>
+              </tr>
+              <tr>
+                <td>Adressage IP</td>
+                <td>CIDR</td>
+              </tr>
+              <tr>
+                <td>Tables de routage</td>
+                <td>Accéder à Internet</td>
+              </tr>
+              <tr>
+                <td>Accèder à un réseau d'entreprise</td>
+                <td>Connecter des VPC et des réseaux</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<div *ngIf="tab == 'design'" style="
+width: 600px;
+margin-left: 330px;
+margin-top: 80px;
+">
+   <div class="container" style="height: 100%; ">
+        <h1 class="p-3 text-center">Architecture cible</h1>
+        <div class="d-flex justify-content-center m-auto" style="height: 100%">
+            <div class="m-auto"><img src="assets/network.png"></div>
+        </div>
+    </div>
+
+</div>
+

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 import SwiperCore, { Keyboard, Pagination, Navigation, Virtual } from 'swiper';
@@ -15,11 +15,13 @@ export class SlidesComponent implements OnInit {
 
   slides$ = new BehaviorSubject<string[]>(['']);
 
+  @ViewChild('swiper') swiper: any;
+
   constructor() {}
 
   ngOnInit(): void {
     this.slides$.next(
-      Array.from({ length: 5 }).map((el, index) => `Slide ${index + 1}`)
+      Array.from({ length: 2 }).map((el, index) => `Slide ${index + 1}`)
     );
   }
 

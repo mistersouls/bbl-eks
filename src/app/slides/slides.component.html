@@ -17,9 +17,38 @@
       <corp-contents></corp-contents>
     </div>
   </ng-template>
+  <ng-template swiperSlide>
+    <div class="swiper-slide-container">
+      <div class="banner-image"></div>
+      <corp-cloud-native></corp-cloud-native>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="swiper-slide-container">
+      <div class="banner-image"></div>
+      <corp-network></corp-network>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="swiper-slide-container">
+      <div class="banner-image"></div>
+      <corp-vpn></corp-vpn>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="swiper-slide-container">
+      <div class="banner-image"></div>
+      <corp-k8s></corp-k8s>
+    </div>
+  </ng-template>
   <ng-template swiperSlide *ngFor="let slide of slides$ | async; index as i">
     <div class="swiper-slide-container">
       <div class="banner-image"></div>
     </div>
   </ng-template>
 </swiper>
+
+<!-- <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom"
+        ngbPopover="This is simple example form ItSolutionStuff.com" popoverTitle="Popover on top">
+  Popover on top
+</button> -->
